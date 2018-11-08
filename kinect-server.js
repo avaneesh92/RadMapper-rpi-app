@@ -14,6 +14,8 @@ const getKinect = function(devNum = 0){
         return kcam;
     }
 }
+
+/**************Listen for Messages from parent*********/
 process.on('message',(msg)=>{
     var kinect = getKinect();
     kinect.setTiltAngle(msg.angle);

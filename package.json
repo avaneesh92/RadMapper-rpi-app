@@ -13,6 +13,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "nan": "^2.11.1",
-    "readable-stream": "^3.0.6"
+    "readable-stream": "^3.0.6",
+    "serialport": "^7.0.2"
   }
 }

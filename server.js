@@ -11,6 +11,10 @@ kinectServer.on('message',(msg)=>{
   console.log(msg);
 });
 
+var roverServer = cp.fork('./rover-server.js');
+roverServer.on('message',(msg)=>{
+  console.log(msg);
+});
 var program = {
   port: 3000,
   host: '0.0.0.0'
@@ -40,7 +44,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-  kinectServer.send({'angle':0});
+  roverServer.send({'msg':'#>FW 200 3000<'});
   res.sendFile(__dirname + '/index.html');
 });
 
