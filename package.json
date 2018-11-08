@@ -1,0 +1,18 @@
+{
+  "name": "node-kinect-rpi-basic",
+  "version": "1.0.0",
+  "description": "Connecting kinect Xbox 360 to Rpi and accessing it using NodeJs. Based on 'rubeniskov/nkinect' repo on github",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "nan": "^2.11.1",
+    "readable-stream": "^3.0.6"
+  }
+}
