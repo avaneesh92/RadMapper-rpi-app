@@ -1,6 +1,7 @@
 const SerialPort = require('serialport');
 const Ready = require('@serialport/parser-ready');
-const port = new SerialPort('/dev/ttyUSB0');
+const config = require('./config.js');
+const arduino = new SerialPort(config.SERIAL_PORT_ARDUINO);
 
 const parser = port.pipe(new Ready({ delimiter: '\n' }));
 parser.on('ready', () => console.log('the ready byte sequence has been received'));

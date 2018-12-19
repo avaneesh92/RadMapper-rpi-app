@@ -1,0 +1,1 @@
+module.exports.SERIAL_PORT_ARDUINO = "'/dev/ttyUSB0'";
