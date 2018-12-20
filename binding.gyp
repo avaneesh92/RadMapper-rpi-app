@@ -4,7 +4,7 @@
     },
     "targets": [{
         "target_name": "nkinect",
-        "sources": [ "src/addon/nkinect.cc" ],
+        "sources": [ "nkinect/addon/nkinect.cc" ],
         "include_dirs": [
             "<!(node -e \"require('nan')\")"
         ],

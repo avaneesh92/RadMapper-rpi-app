@@ -44,7 +44,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', function(req, res) {
-  roverServer.send({'msg':'#>FW 200 3000<'});
+  //roverServer.send({'msg':'#>FW 200 3000<'});
   res.sendFile(__dirname + '/index.html');
 });
 

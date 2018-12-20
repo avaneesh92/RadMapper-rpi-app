@@ -1,7 +1,7 @@
 /*
 * Kinect service, Runs as new node process and sends data events to parent process
 */
-const nkinect = require('./src/module/nkinect');
+const nkinect = require('./nkinect/module/nkinect');
 const kInit = 0;
 var kcam = null;
 const getKinect = function(devNum = 0){
