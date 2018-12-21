@@ -7,8 +7,12 @@ const routes =  require('../routes.js');
 
 class MotionAPI {
     constructor(app){
-        // Forward movement
-        app.get(routes.MOTION_MOVE_FW, function(req, res) {
+        //Movement handler
+        app.get(routes.MOTION_MOVE, function(req, res) {
+            
+        });
+        //Turn handler
+        app.get(routes.MOTION_TURN, function(req, res) {
             
         });
     }
