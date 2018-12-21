@@ -1,6 +1,6 @@
-cmd_Release/obj.target/nkinect/src/addon/nkinect.o := g++ '-DNODE_GYP_MODULE_NAME=nkinect' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/home/pi/.node-gyp/8.12.0/include/node -I/home/pi/.node-gyp/8.12.0/src -I/home/pi/.node-gyp/8.12.0/deps/openssl/config -I/home/pi/.node-gyp/8.12.0/deps/openssl/openssl/include -I/home/pi/.node-gyp/8.12.0/deps/uv/include -I/home/pi/.node-gyp/8.12.0/deps/zlib -I/home/pi/.node-gyp/8.12.0/deps/v8/include -I../node_modules/nan -I/usr/local/include/libfreenect,/usr/local/include/libusb-1.0  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -fexceptions -MMD -MF ./Release/.deps/Release/obj.target/nkinect/src/addon/nkinect.o.d.raw   -c -o Release/obj.target/nkinect/src/addon/nkinect.o ../src/addon/nkinect.cc
-Release/obj.target/nkinect/src/addon/nkinect.o: ../src/addon/nkinect.cc \
- ../node_modules/nan/nan.h \
+cmd_Release/obj.target/nkinect/nkinect/addon/nkinect.o := g++ '-DNODE_GYP_MODULE_NAME=nkinect' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/home/pi/.node-gyp/8.12.0/include/node -I/home/pi/.node-gyp/8.12.0/src -I/home/pi/.node-gyp/8.12.0/deps/openssl/config -I/home/pi/.node-gyp/8.12.0/deps/openssl/openssl/include -I/home/pi/.node-gyp/8.12.0/deps/uv/include -I/home/pi/.node-gyp/8.12.0/deps/zlib -I/home/pi/.node-gyp/8.12.0/deps/v8/include -I../node_modules/nan -I/usr/local/include/libfreenect,/usr/local/include/libusb-1.0  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -fexceptions -MMD -MF ./Release/.deps/Release/obj.target/nkinect/nkinect/addon/nkinect.o.d.raw   -c -o Release/obj.target/nkinect/nkinect/addon/nkinect.o ../nkinect/addon/nkinect.cc
+Release/obj.target/nkinect/nkinect/addon/nkinect.o: \
+ ../nkinect/addon/nkinect.cc ../node_modules/nan/nan.h \
  /home/pi/.node-gyp/8.12.0/include/node/node_version.h \
  /home/pi/.node-gyp/8.12.0/include/node/uv.h \
  /home/pi/.node-gyp/8.12.0/include/node/uv-errno.h \
@@ -28,8 +28,8 @@ Release/obj.target/nkinect/src/addon/nkinect.o: ../src/addon/nkinect.cc \
  ../node_modules/nan/nan_weak.h ../node_modules/nan/nan_object_wrap.h \
  ../node_modules/nan/nan_private.h \
  ../node_modules/nan/nan_typedarray_contents.h \
- ../node_modules/nan/nan_json.h ../src/addon/ofxKinectExtras.h
-../src/addon/nkinect.cc:
+ ../node_modules/nan/nan_json.h ../nkinect/addon/ofxKinectExtras.h
+../nkinect/addon/nkinect.cc:
 ../node_modules/nan/nan.h:
 /home/pi/.node-gyp/8.12.0/include/node/node_version.h:
 /home/pi/.node-gyp/8.12.0/include/node/uv.h:
@@ -60,4 +60,4 @@ Release/obj.target/nkinect/src/addon/nkinect.o: ../src/addon/nkinect.cc \
 ../node_modules/nan/nan_private.h:
 ../node_modules/nan/nan_typedarray_contents.h:
 ../node_modules/nan/nan_json.h:
-../src/addon/ofxKinectExtras.h:
+../nkinect/addon/ofxKinectExtras.h:

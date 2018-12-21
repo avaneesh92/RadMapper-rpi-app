@@ -86,7 +86,7 @@ INCS_Release := \
 	-I/usr/local/include/libfreenect,/usr/local/include/libusb-1.0
 
 OBJS := \
-	$(obj).target/$(TARGET)/src/addon/nkinect.o
+	$(obj).target/$(TARGET)/nkinect/addon/nkinect.o
 
 # Add to the list of files we specially track dependencies for.
 all_deps += $(OBJS)
