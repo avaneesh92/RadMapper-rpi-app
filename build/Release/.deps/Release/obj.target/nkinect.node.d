@@ -1,1 +1,1 @@
-cmd_Release/obj.target/nkinect.node := g++ -shared -pthread -rdynamic -lfreenect -L/usr/local/lib  -Wl,-soname=nkinect.node -o Release/obj.target/nkinect.node -Wl,--start-group Release/obj.target/nkinect/src/addon/nkinect.o -Wl,--end-group 
+cmd_Release/obj.target/nkinect.node := g++ -shared -pthread -rdynamic -lfreenect -L/usr/local/lib  -Wl,-soname=nkinect.node -o Release/obj.target/nkinect.node -Wl,--start-group Release/obj.target/nkinect/nkinect/addon/nkinect.o -Wl,--end-group 
