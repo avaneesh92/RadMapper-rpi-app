@@ -159,6 +159,10 @@ class NKinectDevice {
         this._context.stopDepth();
         return this;
     }
+    close(){
+        this._context.close();
+        return this;
+    }
 }
 
 module.exports = {NKinectDevice, NKINECT_CAPABILITIES, NKINECT_RESOLUTION, NKINECT_VIDEO_FORMAT, NKINECT_DEPTH_FORMAT, NKINECT_LED_OPTIONS,

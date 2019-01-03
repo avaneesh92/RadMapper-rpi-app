@@ -386,6 +386,7 @@ static NAN_MODULE_INIT(Init) {
         Nan::SetPrototypeMethod(tpl, "stopDepth", NKinect::StopDepth);
         Nan::SetPrototypeMethod(tpl, "resume", NKinect::Resume);
         Nan::SetPrototypeMethod(tpl, "pause", NKinect::Pause);
+        Nan::SetPrototypeMethod(tpl, "close", NKinect::Close);
 
         constructor().Reset(Nan::GetFunction(tpl).ToLocalChecked());
         Nan::Set(target, Nan::New("NKinect").ToLocalChecked(),
@@ -398,13 +399,13 @@ static NAN_METHOD(New) {
                 if(info[0]->IsObject())
                     opts = freenect_init_options(info[0].As<v8::Object>());
 
-                printf("autoInit %d, device %d, maxTiltAngle %d, minTiltAngle %d, logLevel %d, capabilities %d\n",
+ /*               printf("autoInit %d, device %d, maxTiltAngle %d, minTiltAngle %d, logLevel %d, capabilities %d\n",
                 opts.autoInit,
                 opts.device,
                 opts.maxTiltAngle,
                 opts.minTiltAngle,
                 opts.logLevel,
-                opts.capabilities);
+                opts.capabilities);*/
 
                 NKinect *obj = new NKinect(opts);
                 obj->Wrap(info.This());
@@ -486,6 +487,11 @@ static NAN_METHOD(StopVideo) {
 static NAN_METHOD(StopDepth) {
         NKinect* obj = Nan::ObjectWrap::Unwrap<NKinect>(info.Holder());
         obj->StopDepthCapture();
+        info.GetReturnValue().Set(obj->handle());
+}
+static NAN_METHOD(Close) {
+        NKinect* obj = Nan::ObjectWrap::Unwrap<NKinect>(info.Holder());
+        obj->Close();
         info.GetReturnValue().Set(obj->handle());
 }
 

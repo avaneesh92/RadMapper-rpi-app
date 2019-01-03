@@ -1,7 +1,7 @@
 {
-  "name": "node-kinect-rpi-basic",
+  "name": "radmapper-rpi-app",
   "version": "1.0.0",
-  "description": "Connecting kinect Xbox 360 to Rpi and accessing it using NodeJs. Based on 'rubeniskov/nkinect' repo on github",
+  "description": "Radmapper RPi application. For motor driving and Kinect interface",
   "private": true,
   "main": "server.js",
   "scripts": {
@@ -16,6 +16,6 @@
     "readable-stream": "^3.0.6",
     "serialport": "^7.0.2",
     "jsonschema": "^1.2.4",
-    "mississippi": "^3.0.0"
+    "through": "^2.3.8"
   }
 }
