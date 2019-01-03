@@ -14,9 +14,14 @@ const eventDef = require('./helper/eventsDef.js');
 
 /**********************Kinect handler process******************/
 var kinectServer = cp.fork('./kinect-server.js');
+//Listen for kinect mcommand events
+eventBus.on(eventDef.KINECT_CMD,function(data){
+    kinectServer.send({"type":"cmd","payload":data});
+})
 kinectServer.on('message',(msg)=>{
   
 });
+
 /**********************Rover Movements Handler Process**********/
 var roverServer = cp.fork('./rover-server.js');
 //Listen for incoming rover commands on event bus

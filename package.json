@@ -15,6 +15,7 @@
     "nan": "^2.11.1",
     "readable-stream": "^3.0.6",
     "serialport": "^7.0.2",
-    "jsonschema": "^1.2.4"
+    "jsonschema": "^1.2.4",
+    "mississippi": "^3.0.0"
   }
 }

@@ -5,7 +5,10 @@ const arduino = new SerialPort(config.SERIAL_PORT_ARDUINO);
 
 const parser = arduino.pipe(new Readline());
 parser.on('ready', () => console.log('Rover is ready'));
-parser.on('data', console.log);
+//Incoming data from Arduino
+parser.on('data', (response)=>{
+    if (config.DEBUG) console.log("ROVER SERVER: Arduino=> "+response);
+});
 /**************Movement commands processing ***********/
 const procCmd = function(data){
     let speed = config.MOTION_MIN_SPEED;
@@ -18,7 +21,7 @@ const procCmd = function(data){
     }
     let cmd = "#>"+data.dir+" "+speed+" "+timeout+"<";
     arduino.write(cmd);
-    if (config.DEBUG) console.log(cmd);
+    if (config.DEBUG) console.log("ROVER SERVER: Command to arduino=> "+cmd);
     //TODO: wait for response and log the motion
 }
 /**************Listen for Messages from parent*********/
